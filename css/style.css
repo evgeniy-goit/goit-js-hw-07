@@ -26,3 +26,37 @@ img {
     border: 1px solid transparent;
     flex-basis: calc(100% / 3 - 20px);
 }
+
+
+#name-input {
+  margin-top: 15px;  
+}
+
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+#validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+#validation-input.invalid {
+    border-color: #f44336;
+  }
+
+#font-size-control {
+    display: block;
+    margin-top: 30px; 
+}
+
+#controls {
+    margin-top: 30px;
+}
+
+.box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 25px;
+    flex-direction: row;
+  }
