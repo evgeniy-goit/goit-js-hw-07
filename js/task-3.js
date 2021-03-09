@@ -18,13 +18,15 @@ const images = [
 
   const imagesContainer = document.querySelector('#gallery');
  
-  const imagesItem = images.map(({url, alt}) => {
-      const imagesElementLi = document.createElement('img');
-
-      imagesContainer.insertAdjacentHTML('beforeend',`<li class ="gallery-item"> <img src="${url}" alt="${alt}"> </li>`);
-
-      return imagesElementLi;
+  const imagesItem = (({url, alt}) => {
+      return `<li class ="gallery-item"> <img src="${url}" alt="${alt}"> </li>`;
   }) 
 
-  console.log(imagesItem);
+const imageGallary = images.map(imagesItem).join('');
+  
+imagesContainer.insertAdjacentHTML('beforeend', imageGallary);
+  
+console.log(imagesContainer);
+
+
 
